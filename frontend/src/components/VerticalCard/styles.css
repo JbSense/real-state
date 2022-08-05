@@ -1,0 +1,24 @@
+.Vertical-card {
+  width: 300px;
+  position: relative;
+}
+
+.Vertical-card__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black-default);
+  opacity: 52%;
+  border-radius: var(--border-radius-medium);
+}
+
+.Vertical-card__image {
+  width: 100%;
+  border-radius: var(--border-radius-medium);
+}
+
+.Vertical-card__infos {
+  position: absolute;
+  bottom: var(--space-sides);
+  left: var(--space-sides);
+}

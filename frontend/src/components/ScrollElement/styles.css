@@ -1,0 +1,4 @@
+.Scroll-element {
+  display: flex;
+  gap: var(--margin-elements);
+}

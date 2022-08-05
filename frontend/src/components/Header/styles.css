@@ -1,0 +1,40 @@
+.Header {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--space-sides);
+  background-color: var(--color-black-opacity);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Header__logo {
+  z-index: 10;
+}
+
+.Header__menu-toggle {
+  z-index: 10;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle__top-line, .menu-toggle__bottom-line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-white-default);
+  transition: ease-out .3s;
+}
+
+.nav-open .menu-toggle__top-line {
+  transform: translateX(6px);
+}
+
+.nav-open .menu-toggle__bottom-line {
+  transform: translateX(-6px);
+}

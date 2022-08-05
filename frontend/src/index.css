@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-white-default: #fff;
+  --color-black-default: #060808;
+  --color-black-opacity: #060808d7;
+  --color-gray-default: #252525;
+  --color-golden: #DAA50B;
+
+  --space-sides: 16px;
+  --margin-sections: 24px;
+  --margin-texts: 8px;
+  --margin-elements: 16px;
+
+  --border-radius-small: 8px;
+  --border-radius-medium: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Space Grotesk', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--color-black-default);
+  color: var(--color-white-default);
+  position: relative;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 52px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--color-white-default)
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--golden-font);
+}
+

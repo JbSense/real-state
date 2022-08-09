@@ -1,33 +1,35 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable prefer-const */
 import React from 'react'
-import ScrollElement from '../../components/ScrollElement/ScrollElement'
 import VerticalCard from '../../components/VerticalCard/VerticalCard'
 import './styles.css'
 
 function Tests () {
-  let scrollCardTwo = 70
-  let scrollCardTree = 140
-  let scrollCardFour = 210
-
   const t = () => {
     let scroll = document.querySelector('.Tests__vertical-cards').scrollLeft
     const cards = document.querySelectorAll('.Vertical-card')
+    const localCardOne = cards[1].getBoundingClientRect().left
 
-    const cardWitdh = cards[0].clientWidth / 2
+    // if (localCardOne < 50 && localCardOne > 0) {
+    //   document.querySelector('.Tests__vertical-cards').classList.add('focus')
+    // }
 
-    if (scroll >= cardWitdh && scrollCardTwo > 0) {
-      scrollCardTwo -= 2
-      cards[1].style.transform = 'translateX(-' + scrollCardTwo + 'px)'
+    if (cards[1].getBoundingClientRect().left < (cards[1].clientWidth / 3)) {
+      cards[0].style.marginRight = '10px'
+    } else {
+      cards[0].style.marginRight = '-60px'
     }
 
-    if (scroll >= (cardWitdh * 2) && scrollCardTree > 0) {
-      scrollCardTree -= 2
-      cards[2].style.transform = 'translateX(-' + scrollCardTree + 'px)'
+    if (cards[2].getBoundingClientRect().left < (cards[1].clientWidth / 3)) {
+      cards[1].style.marginRight = '10px'
+    } else {
+      cards[1].style.marginRight = '-60px'
     }
 
-    if (scroll >= (cardWitdh * 3) && scrollCardFour > 0) {
-      scrollCardFour -= 2
-      cards[3].style.transform = 'translateX(-' + scrollCardFour + 'px)'
+    if (cards[3].getBoundingClientRect().left < (cards[1].clientWidth / 3)) {
+      cards[2].style.marginRight = '10px'
+    } else {
+      cards[2].style.marginRight = '-60px'
     }
   }
 
@@ -44,7 +46,7 @@ function Tests () {
       {/* <img src='images/shanks-icon.jpg' alt='' /> */}
 
       <div className='Tests__vertical-cards' onScroll={t}>
-        <ScrollElement>
+        <div className='vertical-cards__cards-container'>
           <VerticalCard
             imagePath='images\cards\card-house-1.jpg'
             local='Boston - Massachusetts'
@@ -61,7 +63,7 @@ function Tests () {
             imagePath='images\cards\card-house-4.jpg'
             local='Miami - Florida'
             price='$102.000.000'/>
-        </ScrollElement>
+        </div>
       </div>
     </div>
   )

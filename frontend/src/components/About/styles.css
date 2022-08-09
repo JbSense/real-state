@@ -1,14 +1,23 @@
 .About {
   width: 100%;
-  padding: 0 var(--space-sides);
 }
 
 .About__title {
-  margin-bottom: var(--margin-texts);
+  margin: 0 var(--space-sides) var(--margin-texts) var(--space-sides);
+}
+
+.About__texts {
+  margin: 0 var(--space-sides);
 }
 
 .About__infos-cards {
   margin-top: var(--margin-elements);
+  padding: 0 var(--space-sides);
   overflow-x: auto;
   display: flex;
+}
+
+.infos-cards__cards {
+  display: flex;
+  gap: var(--margin-elements);
 }

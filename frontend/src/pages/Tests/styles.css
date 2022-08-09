@@ -16,23 +16,42 @@ img {
   display: flex;
 }
 
-/* .Tests__vertical-cards .Vertical-card {
+.vertical-cards__cards-container {
+  display: flex;
+}
+
+.Tests__vertical-cards .Vertical-card {
   transition: ease-out .5s;
-} */
+}
+
+.Tests__vertical-cards .Vertical-card {
+  margin-right: -60px;
+}
 
 .Tests__vertical-cards .Vertical-card:nth-child(1) {
-  transform: translateX(0px);
   z-index: 4;
 }
 .Tests__vertical-cards .Vertical-card:nth-child(2) {
-  transform: translateX(-70px);
   z-index: 3;
 }
 .Tests__vertical-cards .Vertical-card:nth-child(3) {
-  transform: translateX(-140px);
   z-index: 2;
 }
 .Tests__vertical-cards .Vertical-card:nth-child(4) {
-  transform: translateX(-210px);
   z-index: 1;
+}
+
+.Tests__vertical-cards.focus .Vertical-card:nth-child(2) {
+  transform: translateX(-70px);
+  animation: card-animation ease-out .8s;
+}
+
+@keyframes card-animation {
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-70px);
+    /* z-index: 5; */
+  }
 }
